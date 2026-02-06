@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: white;
+    padding: 20px;
+}
+
+/* topbar and navbar */
+.topbar {
+    max-width: 1200px;
+    margin: 0 auto 0px;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding: 15px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    color: black;
+}
+
+.navbar ul li:first-child {
+    margin-right: auto;
+    font-weight: 600;
+}
+
+.navbar ul li:first-child p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.navbar ul li img {
+    overflow: hidden;
+    width: 50px;
+    height: auto;
+}
+
+/* main page grid, 12 columns, all elemnts must total 12 columns spanned */
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+}
+
+/* hero area - top left, 5 columns across, 2 rows */
+.hero {
+    grid-column: span 5; /*5*/
+    grid-row: span 2;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+}
+
+.hero:hover {
+    cursor: pointer;
+}
+
+/* portrait area - top middle, 3 columns, 2 rows */
+.portrait {
+    grid-column: span 3; /*5 + 3 = 8*/
+    grid-row: span 2;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+}
+
+/* projects area - top right, 4 columns, 2 rows */
+.projects {
+    grid-column: span 4; /*5 + 3 + 4 = 12, next row*/
+    grid-row: span 2;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    color: black;
+}
+
+.projects h3 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    color: rgb(35, 35, 35);
+}
+
+.projects ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects ul li {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(77, 191, 229, 0.412);
+    padding: 20px 0px
+}
+
+/* about area - bottom left, 4 columns, 1 row */
+.about {
+    grid-column: span 4; /*4*/
+    grid-row: span 1;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding: 30px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.about p {
+    font-size: 13px;
+    margin: 0;
+    color: black;
+}
+
+/* contact area - bottom middle, 4 columns, 1 row */
+.contact {
+    grid-column: span 4; /*4 + 4 = 8*/
+    grid-row: span 1;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact p {
+    font-size: 13px;
+    margin-bottom: 60px;
+    color: black;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* socials area - bottom right, 4 columns, 1 row */
+.socials {
+    grid-column: span 4; /*4 + 4 + 4 = 12, next row*/
+    grid-row: span 1;
+    background: #dbe7ff;
+    border-radius: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.socials ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.socials ul li {
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+}
+
+.socials ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* javascript stuff here (script.js) */
+
+/* .colorfont {
+    background-color: rgb(224, 154, 247);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.colorsize {
+    color: purple;
+    font-size: large;
+    border: 2px solid rgba(73, 1, 73, 0.345) !important;
+}
+
+#box3 {
+    box-sizing: border-box;
+    border: 2px solid #0000;
+} */
+
+.switch {
+    filter: invert(1);
+}
+
+.dark-body {
+    background-color: black;
+}
+
+.dark-topbar {
+    background-color: grey;
+}
+
+.dark-nav p, .dark-nav ul li a {
+    color: white;
+}
+
+.dark-page {
+    background: black;
+}
+
+.dark-box1 {
+    background: grey;
+}
+
+.dark-box1 p {
+    color: white;
+}
+
+.dark-box3 {
+    background-color: grey;
+}
+
+.dark-box3 h3 {
+    color: white;
+}
+
+.dark-box3 ul li {
+    color: white;
+    border-bottom: 2px solid rgb(103, 103, 103);
+}
+
+.dark-box4, .dark-box4 p {
+    background-color: grey;
+    color: white;
+}
+
+.dark-box5, .dark-box5 p, .dark-box5 h1 {
+    background-color: grey;
+    color: white;
+}
+
+.dark-box6, .dark-box6 ul li a {
+    background-color: grey;
+    color: white;
+}
